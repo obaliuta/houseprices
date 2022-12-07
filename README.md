@@ -1,5 +1,5 @@
 # houseprices
-California House Prices Data Analysis and prediction model.
+California House Prices Data Analysis and prediction model and its deployment using Power BI.
 
 Kaggle dataset link:
 
