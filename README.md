@@ -1,5 +1,5 @@
 # houseprices
-California House Prices Data Analysis and prediction model and its deployment using Flask and with Power BI.
+California House Prices Data Analysis, prediction model and its deployment using Flask and with Power BI.
 
 Kaggle dataset link:
 
