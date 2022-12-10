@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+  <!-- Make it compatible to mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>California Housing Prices Prediction</title>
+  <style>
+    body{background-image: url({{url_for('static', filename='builtin/background.jpg')}});}
+  </style>
+  
+</head>
+
+	<h1 style="color:rgb(206, 131, 9);">Housing prices prediction</h1>
+     <!-- Action is where the data is sent. In our case, predict page.
+     If action is omitted, it assumed to be the current page -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="longitude" placeholder="City Longitude" required="required" /><br>
+      <input type="text" name="latitude" placeholder="City Latitude" required="required" /><br>
+      <input type="text" name="housing_median_age" placeholder="Housing Age" required="required" /><br>
+      <input type="text" name="total_rooms" placeholder="Total Rooms" required="required" /><br>
+      <input type="text" name="total_bedrooms" placeholder="Total Bedrooms" required="required" /><br>
+      <input type="text" name="population" placeholder="Population" required="required" /><br>
+      <input type="text" name="households" placeholder="Households" required="required" /><br>
+      <input type="text" name="income" placeholder="Income" required="required" /><br>
+      <label for="ocean_proximity_list">Please provide an index only below: Ocean less than 1 hour (0); Inland (1); Island (2); Near Bay (3); Near Ocean (4).</label><br>
+      <input type="text" name="ocean_proximity" placeholder="Ocean Proximity Index" required="required" /><p>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Housing Price</button></p>
+    </form>
+
+   <br>
+   <br>
+   <h4 style="color:rgb(206, 9, 9);">
+   {{ prediction_text }} </h4>
+
+ </div>
+
+
+</body>
+</html>
